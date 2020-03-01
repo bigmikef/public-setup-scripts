@@ -10,16 +10,20 @@ echo "This script will install minimal utils for a Ubuntu 18.04 VM"
 echo 
 
 ###
+# Basic make sure update and upgrade
+apt -y update
+apt -y upgrade
+
+###
 # Apt install the following
-apt -y install git vim-gnome ack-grep
+apt -y install git vim-gnome ack-grep curl
 
 ###
 # Vim config
-#TODO wget -c personal.vimrc -O ~/.vimrc
-
+wget -c https://raw.githubusercontent.com/bigmikef/public-setup-scripts/master/personal.vimrc -O ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +'PlugInstall --sync' +qa
 
 ###
 # ack-grep config
-#TODO wget -c personal.ackrc -O ~/.ackrc
+wget -c https://raw.githubusercontent.com/bigmikef/public-setup-scripts/master/personal.ackrc -O ~/.ackrc
