@@ -10,17 +10,13 @@ echo "This script will install minimal utils for a Ubuntu 18.04 VM"
 echo 
 
 ###
-# Make the PS1 look right for me
-export PS1="${PS1:0:-1}\n${PS1: -1:1}"
-
-###
 # Basic make sure update and upgrade
 apt -y update
 apt -y upgrade
 
 ###
 # Apt install the following
-apt -y install git vim-gnome ack-grep curl
+apt -y install git vim-gnome ack-grep curl gcc make perl
 
 ###
 # Vim config
