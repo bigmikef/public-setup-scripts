@@ -16,7 +16,7 @@ apt -y upgrade
 
 ###
 # Apt install the following
-apt -y install git vim-gnome ack-grep curl gcc make perl
+apt -y install git vim-gnome ack-grep curl gcc make perl net-tools
 
 ###
 # Vim config
