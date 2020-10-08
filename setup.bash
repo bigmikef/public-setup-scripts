@@ -30,13 +30,13 @@ apt -y install git vim-gtk ack curl gcc make perl net-tools
 
 ###
 # Vim config
-wget -c https://raw.githubusercontent.com/bigmikef/public-setup-scripts/master/personal.vimrc -O ~$USER/.vimrc
+wget -c https://raw.githubusercontent.com/bigmikef/public-setup-scripts/master/personal.vimrc -O /home/$USER/.vimrc
 wget -c https://raw.githubusercontent.com/bigmikef/public-setup-scripts/master/personal.vimrc -O ~/.vimrc
-git clone https://github.com/VundleVim/Vundle.vim.git ~$USER/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git /home/$USER/.vim/bundle/Vundle.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +'PlugInstall --sync' +qa
 
 ###
 # ack-grep config
 wget -c https://raw.githubusercontent.com/bigmikef/public-setup-scripts/master/personal.ackrc -O ~/.ackrc
-wget -c https://raw.githubusercontent.com/bigmikef/public-setup-scripts/master/personal.ackrc -O ~$USER/.ackrc
+wget -c https://raw.githubusercontent.com/bigmikef/public-setup-scripts/master/personal.ackrc -O /home/$USER/.ackrc
